@@ -1,0 +1,7 @@
+{
+    "discord_token": "YOUR_DISCORD_TOKEN",
+    "discord_user_id": "YOUR_DISCORD_USER_ID",
+    "stock_symbol": "SPY",
+    "rsi_period": 10,
+    "rsi_threshold": 30
+}
