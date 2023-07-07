@@ -15,13 +15,15 @@ To set up Stock-DM-Notifier, perform the following steps:
 3. Install the required Python dependencies:
 ```pip install -r requirements.txt```
 4. Configure the script by editing the "config.json" file:
-```{
+```
+{
   "discord_token": "YOUR_DISCORD_TOKEN",
   "discord_user_id": "YOUR_DISCORD_USER_ID",
   "stock_symbol": "SPY",
   "rsi_period": 10,
   "rsi_threshold": 30
-}```
+}
+```
 
 discord_token: Your Discord bot token. You can create a bot and obtain the token by following the Discord Developer Portal instructions.
 discord_user_id: Your Discord user ID. This is the user ID to which the DM notifications will be sent. To find your user ID, enable Developer Mode in Discord's Appearance settings and right-click on your profile to copy your ID.
