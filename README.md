@@ -1,6 +1,6 @@
 # Stock-DM-Notifier
 
-Stock-DM-Notifier is a Python script that aims to notify users when it would be a good time to invest, providing a slight edge with long-term passive investing. The script utilizes the Relative Strength Index (RSI) indicator to identify oversold conditions in stock assets.
+Stock-DM-Notifier is a Python script that aims to notify users when it would be a good time to invest, providing a slight edge with long-term passive investing. The script utilises the Relative Strength Index (RSI) indicator to identify oversold conditions in stock assets.
 
 ## Installation
 
