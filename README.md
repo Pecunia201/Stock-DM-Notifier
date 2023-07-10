@@ -10,7 +10,15 @@ To set up Stock-DM-Notifier, perform the following steps:
 ```git clone https://github.com/<username>/stock-dm-notifier.git```
 2. Navigate to the project directory:
 ```cd stock-dm-notifier```
-3. Configure the script by editing the "config.json" file:
+3. Configure the script by editing the "config.json" file
+4. Build the docker image:
+```docker build -t <name> .```
+5. Run the Docker container:
+```docker run <name>```
+
+## Configuration & Usage
+The script will continuously check the specified stock asset once per day at 5am using the RSI indicator. When the RSI value falls below the defined threshold (indicating an oversold condition), the script will send a DM notification on Discord.
+
 ```
 {
   "discord_token": "YOUR_DISCORD_TOKEN",
@@ -25,13 +33,6 @@ discord_user_id: Your Discord user ID. This is the user ID to which the DM notif
 stock_symbol: The symbol of the stock asset you want to monitor (e.g., "SPY" for S&P 500).
 rsi_period: The period length used for calculating the Relative Strength Index (RSI). The default is 10.
 rsi_threshold: The RSI threshold value below which an asset is considered oversold. The default is 30.
-4. Build the docker image:
-```docker build -t <name> .```
-5. Run the Docker container:
-```docker run <name>```
-
-## Usage
-The script will continuously check the specified stock asset once per day at 5am using the RSI indicator. When the RSI value falls below the defined threshold (indicating an oversold condition), the script will send a DM notification on Discord.
 
 ## Future Enhancements
 The following enhancements may be considered for future versions of Stock-DM-Notifier:
