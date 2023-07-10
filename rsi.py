@@ -3,7 +3,7 @@ import talib
 import json
 
 # Read the JSON file
-with open('Stock-DM-Notifier\config.json') as file:
+with open('config.json') as file:
     data = json.load(file)
 
 # Access the values

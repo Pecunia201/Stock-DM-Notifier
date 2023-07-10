@@ -4,17 +4,13 @@ Stock-DM-Notifier is a Python script that aims to notify users when it would be 
 
 ## Installation
 
-Before using Stock-DM-Notifier, you need to install the `ta-lib` package, which is a dependency for the script. Follow the instructions provided [here](https://pypi.org/project/TA-Lib/) to build and install `ta-lib` on your system.
-
 To set up Stock-DM-Notifier, perform the following steps:
 
 1. Clone the repository:
-```git clone https://github.com/your-username/stock-dm-notifier.git```
+```git clone https://github.com/<username>/stock-dm-notifier.git```
 2. Navigate to the project directory:
 ```cd stock-dm-notifier```
-3. Install the required Python dependencies:
-```pip install -r requirements.txt```
-4. Configure the script by editing the "config.json" file:
+3. Configure the script by editing the "config.json" file:
 ```
 {
   "discord_token": "YOUR_DISCORD_TOKEN",
@@ -24,12 +20,15 @@ To set up Stock-DM-Notifier, perform the following steps:
   "rsi_threshold": 30
 }
 ```
-
 discord_token: Your Discord bot token. You can create a bot and obtain the token by following the Discord Developer Portal instructions.
 discord_user_id: Your Discord user ID. This is the user ID to which the DM notifications will be sent. To find your user ID, enable Developer Mode in Discord's Appearance settings and right-click on your profile to copy your ID.
 stock_symbol: The symbol of the stock asset you want to monitor (e.g., "SPY" for S&P 500).
 rsi_period: The period length used for calculating the Relative Strength Index (RSI). The default is 10.
 rsi_threshold: The RSI threshold value below which an asset is considered oversold. The default is 30.
+4. Build the docker image:
+```docker build -t <name> .```
+5. Run the Docker container:
+```docker run <name>```
 
 ## Usage
 The script will continuously check the specified stock asset once per day at 5am using the RSI indicator. When the RSI value falls below the defined threshold (indicating an oversold condition), the script will send a DM notification on Discord.
